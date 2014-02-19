@@ -36,9 +36,11 @@
         [item setTarget:self];
         [item setAction:@selector(selectExtension:)];
         [item setTag:[extension intValue]];
-        if(extension == [NSNumber numberWithInt:mov])
+        if(extension == [NSNumber numberWithInt:mov]){
+            tagItemSelected = mov;
             // Select it by default
             [item setState:1];
+        }
         [self.fileExtensions addItem:item];
     }
 }
