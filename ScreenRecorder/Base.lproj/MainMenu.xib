@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5037.3" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5037.3"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="SRAppDelegate">
+            <connections>
+                <outlet property="SRRecorderMenu" destination="wcK-3b-Ydv" id="FSm-cA-jlW"/>
+                <outlet property="fileExtensions" destination="Xg6-0s-SIM" id="FA9-Aa-zjy"/>
+                <outlet property="startStopButton" destination="lvZ-PR-0Hf" id="h2N-Jg-2Ie"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="wcK-3b-Ydv">
+            <items>
+                <menuItem title="Start Recording" id="lvZ-PR-0Hf">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startStopRecording:" target="Voe-Tx-rLC" id="R0Q-W0-rWF"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Ebz-m0-5bS"/>
+                <menuItem title="File Extension" id="R2W-sp-Mer">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="File Extension" id="Xg6-0s-SIM"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="CN4-uD-PBZ"/>
+                <menuItem title="Quit" id="EPZ-60-A7E">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="Voe-Tx-rLC" id="EBJ-7u-RA1"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>
